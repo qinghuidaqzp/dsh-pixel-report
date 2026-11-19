@@ -1,0 +1,8 @@
+# dsh-pixel-report bundle patch: one host row. Daily statistics are kept in the
+# dsh home directory so they survive restarts; set stateFile to '' to keep them
+# in memory only.
+- insert:
+    - id: pixel-report
+      name: dsh-pixel-report
+      config:
+        stateFile: !!js dshHomePath('pixel-report', 'stats.json')
