@@ -1,3 +1,4 @@
+;(function () {
 /**
  * dsh-pixel-report, Web half: the Pixel Report (像素战报) tab in the right sidebar.
  *
@@ -1211,7 +1212,7 @@ window.__ModuleLoader__.load({
           id: 'dsh-pixel-report',
           kind: 'pixel-report',
           title: () => tr('title'),
-          guide: [{ id: 'pixel-report', order: 62, title: () => tr('title'), description: () => tr('guide') }],
+          guide: [{ id: 'pixel-report', order: 63, title: () => tr('title'), description: () => tr('guide') }],
         }), 'dsh-pixel-report: tab type'))
         step('tab body', () => ctx.slots.inject('sidebar.right.pane.tab', () => ctx.slots.register(
           { name: 'sidebar.right.pane.tab', key: 'dsh-pixel-report', locale: LOCALE_NS },
@@ -1222,3 +1223,5 @@ window.__ModuleLoader__.load({
     }
   },
 })
+
+})();
